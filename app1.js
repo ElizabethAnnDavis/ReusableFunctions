@@ -55,7 +55,9 @@ function changeOccupationKey(a){
     incrementAges(arr);
 
     return arr;
-}// Map the array to change the “occupation” key to “job” and increment every age by 1
+}
+
+// Map the array to change the “occupation” key to “job” and increment every age by 1
 function mapToMakeChanges(a){
     a = changeOccupationKey(a);
     a = incrementAges(a);
