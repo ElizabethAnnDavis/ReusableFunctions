@@ -16,11 +16,14 @@
  * { id: "7", name: "Bilbo", occupation: "None", age: "111" }]
 */
 
+/**************** Functions ****************/
+// Sort the array by age.
 function sortByAge(arr){
     arr = arr.sort(function(a, b){return a.age - b.age});
     return arr;
 }
 
+// Filter the array to remove entries with an age greater than 50.
 function removeOverFifty(a){
     a = sortByAge(a);
     for(let i = (a.length - 1); i >= 0; i--){
@@ -31,6 +34,7 @@ function removeOverFifty(a){
     return a;
 }
 
+// increment every age by 1
 function incrementAges(a){
     for(let i = (a.length - 1); i >= 0; i--){
         a[i].age = Number(a[i].age) + 1;
@@ -38,6 +42,7 @@ function incrementAges(a){
     return a;
 }
 
+// Map the array to change the “occupation” key to “job” and increment every age by 1.
 function changeOccupationKey(a){
     const arr = a.map(obj => {
         const newObj = {
@@ -50,14 +55,14 @@ function changeOccupationKey(a){
     incrementAges(arr);
 
     return arr;
-}
-
+}// Map the array to change the “occupation” key to “job” and increment every age by 1
 function mapToMakeChanges(a){
     a = changeOccupationKey(a);
     a = incrementAges(a);
     return a;
 }
 
+/*
 function ageData(a){
     const arr = [];
     for(let i = 0; i < a.length; i++){
@@ -67,12 +72,16 @@ function ageData(a){
     console.log(addArray(arr));
     console.log(avgArray(arr));
 }
+*/
 
 function addArray(a){
     let sum = 0;
+    sum = a.reduce((total, curNum) => total + Number(curNum.age), 0);
+    /*
     for(let i = 0; i < a.length; i++){
         sum += Number(a[i].age);
     }
+    */   
     return sum;
 }
 
@@ -83,7 +92,7 @@ function avgArray(a){
 }
 
 
-
+/**************** Variables ****************/
 const objArray = [
     { id: "42", name: "Bruce", occupation: "Knight", age: "41" }, 
     { id: "48", name: "Barry", occupation: "Runner", age: "25" }, 
@@ -91,29 +100,21 @@ const objArray = [
     { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, 
     { id: "7", name: "Bilbo", occupation: "None", age: "111" }
 ];
+let sum = 0;
+let avgVal = 0;
 
 
+/****************** Code *******************/
+console.log(objArray);
 
-//console.log(addArray(objArray));
-//console.log(avgArray(objArray));
+console.log(sortByAge(objArray));
+console.log(removeOverFifty(objArray));
+console.log(mapToMakeChanges(objArray));
 
-
-let sum = objArray.reduce((total, curNum) => total + Number(curNum.age), 0);
-
+sum = addArray(objArray);
 console.log(sum);
 
-let avgVal = sum/objArray.length;
-
+avgVal = avgArray(objArray);
 console.log(avgVal);
 
-
-
-
-
-//console.log(objArray);
-//console.log(changeOccupationKey(objArray));
-
-//console.log(sortByAge(objArray));
-//console.log(removeOverFifty(objArray));
-//console.log(mapToMakeChanges(objArray));
 //ageData(objArray);

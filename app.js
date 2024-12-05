@@ -9,6 +9,8 @@
  * Take a number, n, and print every number between 1 and n without using loops.   Use recursion.
 */
 
+/**************** Functions ****************/
+// Take an array of numbers and return the sum.
 function addArray(a){
     sum = 0;
     for(let i = 0; i < a.length; i++){
@@ -17,12 +19,14 @@ function addArray(a){
     return sum;
 }
 
+// Take an array of numbers and return the average.
 function avgArray(a){
     let sum = addArray(a);
     let avg = sum/a.length;              
     return avg;
 }
 
+// Take an array of strings and return the longest string.
 function longestString(a){
     let str = "";
     for(let i = 0; i < a.length; i++){
@@ -35,6 +39,8 @@ function longestString(a){
     return str;
 }
 
+// Take an array of strings, and a number 
+// return an array of the strings that are longer than the given number. 
 function longerThanNum(a, n){
     let strs = [];
     for(let i = 0; i < a.length; i++){
@@ -45,6 +51,8 @@ function longerThanNum(a, n){
     return strs;
 }
 
+// Take a number, n, 
+// print every number between 1 and n without using loops.   Use recursion.
 function printNums(n){
     let a = [];
     for(let i = 1; i <= n; i++){
@@ -56,11 +64,15 @@ function printNums(n){
     return a;
 }
 
+
+/**************** Variables ****************/
 let anArray = [1, 2, 3, 4, 5];
 let num1 = 3;
 let num2 = 13;
 let strArray =["some", "words", "to", "simply", "fill", "the", "array"];
 
+
+/****************** Code *******************/
 console.log(addArray(anArray));
 console.log(avgArray(anArray));
 console.log(longestString(strArray));
