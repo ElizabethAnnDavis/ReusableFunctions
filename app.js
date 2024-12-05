@@ -54,15 +54,14 @@ function longerThanNum(a, n){
 // Take a number, n, 
 // print every number between 1 and n without using loops.   Use recursion.
 function printNums(n){
-    let a = [];
-    for(let i = 1; i <= n; i++){
-        a.push(i);
-    };
-    a.forEach((a)=>{
-        console.log(a);
-    });
-    return a;
+    if (n <= 0) {
+        return;
+      }
+    
+      printNums(n - 1);
+      console.log(n);
 }
+
 
 
 /**************** Variables ****************/
