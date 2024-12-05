@@ -30,18 +30,16 @@ function copyObject(o){
     return ob;
 }
 
-// create age feild and set it to 0
+// create age field and set it to 0
 function addAgeFeild(o){
     o.age = "0";
     return o;
 }
 
-// create update_at feild and set it to time the object was modified
+// create update_at field and set it to time the object was modified
 function timeModified(o){
     const date = new Date();
-    
-    o.updated_at = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;//timeString;//date.toString();
-    
+    o.updated_at = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
     return o;
 }
 
@@ -69,3 +67,5 @@ console.log(obj2);
 console.log(newObj2);
 
 //console.log(timeModified(obj1));
+
+console.log(incrementAge(newObj2));
