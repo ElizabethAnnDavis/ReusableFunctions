@@ -66,6 +66,4 @@ newObj2 = copyObject(obj2);
 console.log(obj2);
 console.log(newObj2);
 
-//console.log(timeModified(obj1));
-
 console.log(incrementAge(newObj2));
