@@ -39,8 +39,9 @@ function addAgeFeild(o){
 // create update_at feild and set it to time the object was modified
 function timeModified(o){
     const date = new Date();
-    o.updated_at = date.toString();
-    // console.log(date.toString());//date.getTime());
+    
+    o.updated_at = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;//timeString;//date.toString();
+    
     return o;
 }
 
