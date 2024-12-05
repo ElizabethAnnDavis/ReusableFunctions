@@ -62,6 +62,18 @@ function mapToMakeChanges(a){
     return a;
 }
 
+// Use the reduce method to calculate the sum of the ages
+function addArray(a){
+    let sum = a.reduce((total, curNum) => total + Number(curNum.age), 0); 
+    return sum;
+}
+
+// calculate the average age
+function avgArray(a){
+    let avg = addArray(a)/a.length;
+    return avg;
+}
+
 /*
 function ageData(a){
     const arr = [];
@@ -73,24 +85,6 @@ function ageData(a){
     console.log(avgArray(arr));
 }
 */
-
-function addArray(a){
-    let sum = 0;
-    sum = a.reduce((total, curNum) => total + Number(curNum.age), 0);
-    /*
-    for(let i = 0; i < a.length; i++){
-        sum += Number(a[i].age);
-    }
-    */   
-    return sum;
-}
-
-function avgArray(a){
-    let sum = addArray(a);
-    let avg = sum/a.length;
-    return avg;
-}
-
 
 /**************** Variables ****************/
 const objArray = [
