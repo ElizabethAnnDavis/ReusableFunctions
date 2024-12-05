@@ -52,8 +52,6 @@ function changeOccupationKey(a){
         delete newObj.occupation;
         return newObj;
     })
-    incrementAges(arr);
-
     return arr;
 }
 
@@ -72,21 +70,9 @@ function addArray(a){
 
 // calculate the average age
 function avgArray(a){
-    let avg = addArray(a)/a.length;
-    return avg;
+    return addArray(a)/a.length;
 }
 
-/*
-function ageData(a){
-    const arr = [];
-    for(let i = 0; i < a.length; i++){
-        arr.push(Number((a[i].age)));
-    };
-    console.log(arr);
-    console.log(addArray(arr));
-    console.log(avgArray(arr));
-}
-*/
 
 /**************** Variables ****************/
 const objArray = [
@@ -112,5 +98,3 @@ console.log(sum);
 
 avgVal = avgArray(objArray);
 console.log(avgVal);
-
-//ageData(objArray);
